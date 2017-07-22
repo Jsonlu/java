@@ -1,0 +1,49 @@
+group 'cn.jsonlu'
+version '1.0'
+
+//sourceCompatibility = 1.8
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'maven'
+apply plugin: "com.cuisongliu.plugin.mybatis-generator"
+
+
+buildscript {
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.2.RELEASE")
+        classpath "gradle.plugin.com.cuisongliu.plugin:mybatis-generator:0.9.4"
+    }
+}
+
+
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-data-mongodb")
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile("org.springframework.boot:spring-boot-starter-data-rest")
+    compile 'com.squareup.okhttp3:okhttp:3.8.1'
+    compile 'com.alibaba:fastjson:1.2.34'
+    compile 'com.gexin.platform:gexin-rp-sdk-http:4.0.1.9'
+    testCompile 'junit:junit:4.12'
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+}
+
+mbg {
+    overwrite = false
+    consoleable = true
+    jdbc {
+        driver = "com.mysql.jdbc.Driver"
+        url = "jdbc:mysql://localhist:3306/xiaoyaoji?useSSL=false"
+        username = "root"
+        password = "a123456"
+    }
+    xml {
+        resourcesProject = "src/main/java"
+        mapperPlugin = tk.mybatis.mapper.generator.MapperPlugin.class
+        mapperMapper = "com.cuisongliu.springboot.core.mapper.MyMapper"
+        mapperPackage = "com.cuisongliu.mapper"
+        modelPackage = "com.cuisongliu.entity"
+        xmlPackage = "com.cuisongliu.mapper"
+    }
+}

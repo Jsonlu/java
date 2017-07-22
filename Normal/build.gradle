@@ -1,0 +1,19 @@
+allprojects {
+    buildscript {
+        repositories {
+            maven { url "https://plugins.gradle.org/m2/" }
+            maven { url "http://101.37.163.179:8081/repository/maven-public/" }
+            maven { url "http://101.37.38.3:8081/repository/latte-maven/" }
+            mavenCentral()
+            jcenter()
+        }
+
+    }
+    repositories {
+        maven { url "http://101.37.163.179:8081/repository/maven-public/" }
+        maven { url "http://101.37.38.3:8081/repository/latte-maven/" }
+        mavenCentral()
+        jcenter()
+    }
+
+}

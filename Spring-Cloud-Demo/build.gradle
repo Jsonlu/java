@@ -1,0 +1,43 @@
+allprojects {
+    apply plugin: 'maven'
+
+    group = 'cn.mrdear.springcloud'
+    version = '1.0.0'
+}
+
+subprojects {
+    apply plugin: 'java'
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+
+
+    buildscript {
+        repositories {
+            maven { url "https://plugins.gradle.org/m2/" }
+            maven { url "http://101.37.163.179:8081/repository/maven-public/" }
+            maven { url "http://101.37.38.3:8081/repository/latte-maven/" }
+            mavenCentral()
+            jcenter()
+        }
+
+    }
+    repositories {
+        maven { url "http://101.37.163.179:8081/repository/maven-public/" }
+        maven { url "http://101.37.38.3:8081/repository/latte-maven/" }
+        mavenCentral()
+        jcenter()
+    }
+
+
+    dependencies {
+        compile group: 'org.projectlombok', name: 'lombok', version: '1.16.14'
+        testCompile(group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.5.2.RELEASE') {
+            exclude(module: 'commons-logging')
+        }
+    }
+
+
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="Base_main" target="1.8" />
+      <module name="Base_test" target="1.8" />
+      <module name="Excel-Demo_main" target="1.8" />
+      <module name="Excel-Demo_test" target="1.8" />
+      <module name="gRPC-Demo_main" target="1.8" />
+      <module name="gRPC-Demo_test" target="1.8" />
+      <module name="HtmlUnit-Demo_main" target="1.8" />
+      <module name="HtmlUnit-Demo_test" target="1.8" />
+      <module name="Jersey-Demo_main" target="1.8" />
+      <module name="Jersey-Demo_test" target="1.8" />
+      <module name="JPA-Demo_main" target="1.8" />
+      <module name="JPA-Demo_test" target="1.8" />
+      <module name="jwt_main" target="1.8" />
+      <module name="jwt_test" target="1.8" />
+      <module name="Pay-Demo_main" target="1.8" />
+      <module name="Pay-Demo_test" target="1.8" />
+      <module name="Spring-Boot-Demo_main" target="1.8" />
+      <module name="Spring-Boot-Demo_test" target="1.8" />
+      <module name="Spring-Data-Redis_main" target="1.8" />
+      <module name="Spring-Data-Redis_test" target="1.8" />
+      <module name="Spring-Security-Demo_main" target="1.8" />
+      <module name="Spring-Security-Demo_test" target="1.8" />
+      <module name="SSM-Demo_main" target="1.8" />
+      <module name="SSM-Demo_test" target="1.8" />
+      <module name="Util-Demo_main" target="1.8" />
+      <module name="Util-Demo_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

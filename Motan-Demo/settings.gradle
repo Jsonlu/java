@@ -1,0 +1,8 @@
+rootProject.name = 'Motan-Demo'
+include ':Service-Client'
+include ':Service-Provider'
+include ':Service-Consumer'
+
+project(':Service-Client').projectDir = "$rootDir/Service-Client" as File
+project(':Service-Provider').projectDir = "$rootDir/Service-Provider" as File
+project(':Service-Consumer').projectDir = "$rootDir/Service-Consumer" as File

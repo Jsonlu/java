@@ -1,0 +1,12 @@
+rootProject.name = 'springcloud-parent'
+include ':service-discovery-eureka'
+include ':Service-User-Provider'
+include ':Service-Product-Consumer-Ribbon'
+include ':Service-Product-Consumer-Feign'
+include ':Service-Product-Consumer-Feign-Hystrix'
+
+project(':service-discovery-eureka').projectDir = "$rootDir/Service-Discovery-Eureka" as File
+project(':Service-User-Provider').projectDir = "$rootDir/Service-User-Provider" as File
+project(':Service-Product-Consumer-Ribbon').projectDir = "$rootDir/Service-Product-Consumer-Ribbon" as File
+project(':Service-Product-Consumer-Feign').projectDir = "$rootDir/Service-Product-Consumer-Feign" as File
+project(':Service-Product-Consumer-Feign-Hystrix').projectDir = "$rootDir/Service-Product-Consumer-Feign-Hystrix" as File

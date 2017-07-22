@@ -1,0 +1,33 @@
+allprojects  {
+  apply plugin: 'maven'
+
+  group = 'cn.mrdear.motan'
+version = '1.0-SNAPSHOT'
+}
+
+subprojects {
+  apply plugin: 'java'
+  sourceCompatibility = 1.8
+  targetCompatibility = 1.8
+
+  
+  repositories {
+    mavenLocal()
+    
+    maven { url "http://repo.maven.apache.org/maven2" }
+  }
+
+  
+  dependencies {
+    compile group: 'org.projectlombok', name: 'lombok', version:'1.16.14'
+    compile group: 'junit', name: 'junit', version:'4.12'
+    compile group: 'com.google.guava', name: 'guava', version:'21.0'
+    compile group: 'org.slf4j', name: 'slf4j-api', version:'1.7.7'
+    compile group: 'org.slf4j', name: 'jcl-over-slf4j', version:'1.7.7'
+    compile group: 'ch.qos.logback', name: 'logback-core', version:'1.1.2'
+    compile group: 'org.logback-extensions', name: 'logback-ext-spring', version:'0.1.4'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version:'1.1.2'
+}
+
+  
+}

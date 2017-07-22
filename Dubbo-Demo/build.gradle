@@ -1,0 +1,44 @@
+allprojects {
+    apply plugin: 'maven'
+
+    group = 'cn.mrdear.dubbo'
+    version = '1.0.0'
+}
+
+subprojects {
+    apply plugin: 'java'
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+
+    buildscript {
+       repositories {
+           maven { url "http://101.37.163.179:8081/repository/maven-public/" }
+           maven { url "http://101.37.38.3:8081/repository/latte-maven/" }
+           mavenCentral()
+           jcenter()
+           maven { url "https://plugins.gradle.org/m2/" }
+       }
+
+   }
+   repositories {
+       maven { url "http://101.37.163.179:8081/repository/maven-public/" }
+       maven { url "http://101.37.38.3:8081/repository/latte-maven/" }
+       mavenCentral()
+       jcenter()
+   }
+
+
+    dependencies {
+        compile group: 'org.projectlombok', name: 'lombok', version: '1.16.14'
+        compile group: 'junit', name: 'junit', version: '4.12'
+        compile group: 'com.google.guava', name: 'guava', version: '21.0'
+        compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.7'
+        compile group: 'org.slf4j', name: 'jcl-over-slf4j', version: '1.7.7'
+        compile group: 'ch.qos.logback', name: 'logback-core', version: '1.1.2'
+        compile group: 'org.logback-extensions', name: 'logback-ext-spring', version: '0.1.4'
+        compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.2'
+    }
+
+
+}

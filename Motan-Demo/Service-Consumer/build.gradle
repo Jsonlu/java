@@ -1,0 +1,27 @@
+
+description = ''
+dependencies {
+  compile project(':Service-Client')
+    compile(group: 'com.weibo', name: 'motan-core', version:'RELEASE') {
+exclude(module: 'log4j')
+exclude(module: 'slf4j-log4j12')
+    }
+    compile(group: 'com.weibo', name: 'motan-transport-netty', version:'RELEASE') {
+exclude(module: 'log4j')
+exclude(module: 'slf4j-log4j12')
+    }
+    compile(group: 'com.weibo', name: 'motan-registry-zookeeper', version:'RELEASE') {
+exclude(module: 'log4j')
+exclude(module: 'slf4j-log4j12')
+exclude(module: 'zkclient')
+    }
+    compile(group: 'com.101tec', name: 'zkclient', version:'0.10') {
+exclude(module: 'log4j')
+exclude(module: 'slf4j-log4j12')
+    }
+    compile(group: 'com.weibo', name: 'motan-springsupport', version:'RELEASE') {
+exclude(module: 'log4j')
+exclude(module: 'slf4j-log4j12')
+    }
+    compile group: 'org.springframework', name: 'spring-context', version:'4.3.6.RELEASE'
+}

@@ -1,0 +1,26 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'cn.mrdear.poi'
+version = '1.0-SNAPSHOT'
+
+description = """Excel-Demo"""
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+
+repositories {
+
+    maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    compile group: 'org.apache.poi', name: 'poi', version: '3.15'
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.15'
+    compile group: 'junit', name: 'junit', version: '4.10'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.2'
+    compile group: 'org.slf4j', name: 'jcl-over-slf4j', version: '1.7.2'
+    compile group: 'ch.qos.logback', name: 'logback-core', version: '1.1.2'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.2'
+}
